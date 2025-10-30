@@ -1,0 +1,128 @@
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-color: #f39c12;
+        --secondary-color: #e67e22;
+        --text-color: #333;
+        --bg-color: #f9f9f9;
+      }
+      .navbar {
+        padding: 1rem 0;
+        background-color: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .navbar-brand {
+        font-size: 1.8rem;
+        color: #f39c12 !important;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .navbar-brand img {
+        width: 40px;
+        height: 40px;
+      }
+      .nav-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .nav-link {
+        color: #333;
+        font-weight: 500;
+        margin: 0 15px;
+      }
+      .nav-link:hover {
+        color: #f39c12;
+      }
+      .user-icon {
+        font-size: 1.2rem;
+        cursor: pointer;
+        color: #333;
+        padding: 8px;
+        border-radius: 50%;
+        transition: background-color 0.3s;
+      }
+      .user-icon:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+      .modal-header {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .modal-body {
+        padding-top: 0;
+      }
+      .welcome-message {
+        color: #333;
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .auth-description {
+        color: #666;
+        margin-bottom: 2rem;
+      }
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+          url("assets/restaurant 2.jpeg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 6rem 0;
+      }
+      .hero-content {
+        background-color: rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        border-radius: 10px;
+        backdrop-filter: blur(5px);
+      }
+      .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+      }
+      .order-btn {
+        background-color: #f39c12;
+        border: none;
+        padding: 12px 30px;
+        font-size: 1.2rem;
+        transition: background-color 0.3s;
+      }
+      .order-btn:hover {
+        background-color: #e67e22;
+      }
+
+      @media (max-width: 991px) {
+        .nav-center {
+          position: static;
+          transform: none;
+          background-color: rgba(255, 255, 255, 0.95);
+          padding: 1rem;
+          border-radius: 8px;
+          margin: 1rem 0;
+        }
+        .navbar-collapse {
+          background-color: rgba(255, 255, 255, 0.95);
+          padding: 1rem;
+          border-radius: 8px;
+          margin-top: 1rem;
+        }
+        .nav-link {
+          padding: 0.5rem 1rem;
+          margin: 0;
+          border-radius: 4px;
+        }
+        .nav-link:hover {
+          background-color: rgba(243, 156, 18, 0.1);
+        }
+      }
+  
