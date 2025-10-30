@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Our Location - Gourmet Gather</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #f39c12;
+            --secondary-color: #e67e22;
+            --text-color: #333;
+            --bg-color: #f9f9f9;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .location-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+            width: 80%;
+            margin: 0 auto 2rem;
+        }
+
+        .content-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            align-items: start;
+        }
+
+        .info-section h2 {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            margin-bottom: 2.5rem;
+        }
+
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item strong {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            color: #666;
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .hours-section h2 {
+            font-size: 1.8rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .hours-item {
+            margin-bottom: 1rem;
+        }
+
+        .hours-item strong {
+            color: var(--text-color);
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .hours-item span {
+            color: #666;
+        }
+
+        .reservation-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--primary-color);
+        }
+
+        .reservation-section h3 {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .reservation-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .reservation-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .section-header h1 {
+                font-size: 2rem;
+            }
+            
+            .content-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1.5rem;
+            }
+            
+            .location-section {
+                padding: 1rem 0;
+            }
+            
+            .info-section h2,
+            .hours-section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content-container {
+                padding: 0 1rem;
+            }
+            
+            .reservation-btn {
+                width: 100%;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="location-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Visit Our Location</h1>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="content-container">
+                <!-- Left Column - Contact Information -->
+                <div class="info-section">
+                    <div class="contact-info">
+                        <h2>Contact Information</h2>
+                        <div class="info-item">
+                            <strong>Address</strong>
+                            <p>123 Culinary Street<br>Downtown District, CD 12345</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Phone</strong>
+                            <p>(555) 123-4567</p>
+                        </div>
+                        <div class="info-item">
+                            <strong>Email</strong>
+                            <p>hello@gourmethgather.com</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Hours of Operation -->
+                <div class="hours-section">
+                    <h2>Hours of Operation</h2>
+                    <div class="hours-item">
+                        <strong>Monday - Thursday</strong>
+                        <span>11:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <strong>Friday - Saturday</strong>
+                        <span>11:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="hours-item">
+                        <strong>Sunday</strong>
+                        <span>12:00 PM - 8:00 PM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Reservation Section -->
+            <div class="reservation-section">
+                <h3>Make Reservation</h3>
+                <button class="reservation-btn">Book Your Table Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
