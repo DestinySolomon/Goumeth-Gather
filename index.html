@@ -9,175 +9,26 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --primary-color: #f39c12;
-        --secondary-color: #e67e22;
-        --text-color: #333;
-        --bg-color: #f9f9f9;
-      }
-      .navbar {
-        padding: 1rem 0;
-        background-color: rgba(255, 255, 255, 0.95) !important;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-      .navbar-brand {
-        font-size: 1.8rem;
-        color: #f39c12 !important;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      }
-      .navbar-brand img {
-        width: 40px;
-        height: 40px;
-      }
-      .nav-center {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-      .nav-link {
-        color: #333;
-        font-weight: 500;
-        margin: 0 15px;
-      }
-      .nav-link:hover {
-        color: #f39c12;
-      }
-      .user-icon {
-        font-size: 1.2rem;
-        cursor: pointer;
-        color: #333;
-        padding: 8px;
-        border-radius: 50%;
-        transition: background-color 0.3s;
-      }
-      .user-icon:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
-      .modal-header {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-      .modal-body {
-        padding-top: 0;
-      }
-      .welcome-message {
-        color: #333;
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-      }
-      .auth-description {
-        color: #666;
-        margin-bottom: 2rem;
-      }
-
-      .btn-outline-primary {
-        color: #f39c12;
-        border-color: #333;
-        transition: all 0.3s ease;
-      }
-
-      /* Hover */
-      .btn-outline-primary:hover {
-        background-color: #f39c12;
-        color: #fff;
-        border-color: #333;
-        transform: scale(1.05);
-      }
-
-      /* Active (when clicked) */
-      .btn-outline-primary:active,
-      .btn-outline-primary:focus,
-      .btn-outline-primary:focus-visible {
-        background-color: #d78b0d !important; /* slightly darker orange */
-        border-color: #d78b0d !important;
-        color: #fff !important;
-        box-shadow: 0 0 0 0.25rem rgba(243, 156, 18, 0.3) !important; /* soft glow instead of Bootstrap blue ring */
-      }
-      .hero-section {
-        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-          url("assets/restaurant-2.jpeg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        color: white;
-        padding: 6rem 0;
-      }
-
-      .hero-content {
-        background-color: rgba(0, 0, 0, 0.1);
-        padding: 2rem;
-        border-radius: 10px;
-        -webkit-backdrop-filter: blur(5px);
-        backdrop-filter: blur(5px);
-      }
-      .hero-content h1 {
-        font-size: 3.5rem;
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-      }
-      .order-btn {
-        background-color: #f39c12;
-        border: none;
-        padding: 12px 30px;
-        font-size: 1.2rem;
-        transition: background-color 0.3s;
-      }
-      .order-btn:hover {
-        background-color: #e67e22;
-      }
-
-      @media (max-width: 991px) {
-        .nav-center {
-          position: static;
-          transform: none;
-          background-color: rgba(255, 255, 255, 0.95);
-          padding: 1rem;
-          border-radius: 8px;
-          margin: 1rem 0;
-        }
-        .navbar-collapse {
-          background-color: rgba(255, 255, 255, 0.95);
-          padding: 1rem;
-          border-radius: 8px;
-          margin-top: 1rem;
-        }
-        .nav-link {
-          padding: 0.5rem 1rem;
-          margin: 0;
-          border-radius: 4px;
-        }
-        .nav-link:hover {
-          background-color: rgba(243, 156, 18, 0.1);
-        }
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="assets/logo.png" alt="Goumeth Gather Logo" />
-          Goumeth Gather
+          <img src="assets/gather-logo.png" alt="Goumeth Gather Logo" />
+         <span class="img-text"> Goumeth Gather</span>
         </a>
         <button
           class="navbar-toggler"
@@ -241,11 +92,18 @@
               Sign in to your account or create a new one to start ordering
             </p>
             <div class="d-grid gap-3">
-              <a href="signin.html" class="btn btn-primary btn-lg" style="background-color: #f39c12; border-color: #333;">
+              <a
+                href="signin.html"
+                class="btn btn-primary btn-lg"
+                style="background-color: #f39c12; border-color: #333"
+              >
                 Sign In
               </a>
 
-              <a href="create-account.html" class="btn btn-outline-primary btn-lg">
+              <a
+                href="create-account.html"
+                class="btn btn-outline-primary btn-lg"
+              >
                 Create Account
               </a>
             </div>
@@ -276,442 +134,527 @@
         </div>
       </div>
     </section>
-<!-- Menu Section -->
-      <section class="menu-section">
-        <div class="container">
-            <div class="section-header">
-                <h1>Our Menu Highlights</h1>
-                <p>Discover our signature dishes and customize them to your liking. Each meal comes with options to add your favorite ingredients.</p>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="menu-cards">
-                <!-- Signature Soups Card -->
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Signature Soup">
-                    </div>
-                    <div class="card-body">
-                        <h3>Signature Soups</h3>
-                        <p>Hearty soups with customizable meat portions and fresh vegetables</p>
-                        <div class="card-footer">
-                            <div class="price">Starting from $12</div>
-                            <a href="#" class="arrow-link">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Main Courses Card -->
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Main Course">
-                    </div>
-                    <div class="card-body">
-                        <h3>Main Courses</h3>
-                        <p>Premium entrees with choice of proteins and seasonal sides</p>
-                        <div class="card-footer">
-                            <div class="price">Starting from $24</div>
-                            <a href="#" class="arrow-link">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Fresh Baked Goods Card -->
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Baked Goods">
-                    </div>
-                    <div class="card-body">
-                        <h3>Fresh Baked Goods</h3>
-                        <p>Artisan breads, pastries, and baked treats made fresh daily</p>
-                        <div class="card-footer">
-                            <div class="price">Starting from $6</div>
-                            <a href="#" class="arrow-link">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Intercontinental Dishes Card -->
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Intercontinental Dish">
-                    </div>
-                    <div class="card-body">
-                        <h3>Intercontinental Dishes</h3>
-                        <p>Global flavors from around the world with authentic spices and techniques</p>
-                        <div class="card-footer">
-                            <div class="price">Starting from $18</div>
-                            <a href="#" class="arrow-link">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Artisan Desserts Card -->
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Artisan Dessert">
-                    </div>
-                    <div class="card-body">
-                        <h3>Artisan Desserts</h3>
-                        <p>Handcrafted sweets with premium ingredients and custom toppings</p>
-                        <div class="card-footer">
-                            <div class="price">Starting from $8</div>
-                            <a href="#" class="arrow-link">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Craft Beverages Card -->
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Craft Beverage">
-                    </div>
-                    <div class="card-body">
-                        <h3>Craft Beverages</h3>
-                        <p>Fresh juices, specialty coffees, and signature cocktails</p>
-                        <div class="card-footer">
-                            <div class="price">Starting from $5</div>
-                            <a href="#" class="arrow-link">
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Menu Section -->
+    <section class="menu-section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Our Menu Highlights</h1>
+          <p>
+            Discover our signature dishes and customize them to your liking.
+            Each meal comes with options to add your favorite ingredients.
+          </p>
+          <div class="divider"></div>
         </div>
+
+        <div class="menu-cards">
+          <!-- Signature Soups Card -->
+          <div class="menu-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1547592166-23ac45744acd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Signature Soup"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Signature Soups</h3>
+              <p>
+                Hearty soups with customizable meat portions and fresh
+                vegetables
+              </p>
+              <div class="card-footer">
+                <div class="price">Starting from $12</div>
+                <a href="#" class="arrow-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Courses Card -->
+          <div class="menu-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Main Course"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Main Courses</h3>
+              <p>Premium entrees with choice of proteins and seasonal sides</p>
+              <div class="card-footer">
+                <div class="price">Starting from $24</div>
+                <a href="#" class="arrow-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fresh Baked Goods Card -->
+          <div class="menu-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Baked Goods"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Fresh Baked Goods</h3>
+              <p>Artisan breads, pastries, and baked treats made fresh daily</p>
+              <div class="card-footer">
+                <div class="price">Starting from $6</div>
+                <a href="#" class="arrow-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Intercontinental Dishes Card -->
+          <div class="menu-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Intercontinental Dish"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Intercontinental Dishes</h3>
+              <p>
+                Global flavors from around the world with authentic spices and
+                techniques
+              </p>
+              <div class="card-footer">
+                <div class="price">Starting from $18</div>
+                <a href="#" class="arrow-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Artisan Desserts Card -->
+          <div class="menu-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Artisan Dessert"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Artisan Desserts</h3>
+              <p>
+                Handcrafted sweets with premium ingredients and custom toppings
+              </p>
+              <div class="card-footer">
+                <div class="price">Starting from $8</div>
+                <a href="#" class="arrow-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Craft Beverages Card -->
+          <div class="menu-card">
+            <div class="card-image">
+              <img
+                src="https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Craft Beverage"
+              />
+            </div>
+            <div class="card-body">
+              <h3>Craft Beverages</h3>
+              <p>Fresh juices, specialty coffees, and signature cocktails</p>
+              <div class="card-footer">
+                <div class="price">Starting from $5</div>
+                <a href="#" class="arrow-link">
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- How it works section -->
 
-     <section class="how-it-works-section">
-        <div class="container">
-            <div class="section-header">
-                <h1>How It Works</h1>
-                <p>Simple steps to get your perfect meal delivered fresh to your door</p>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="steps-container">
-                <!-- Step 1 -->
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Select Your Meal</h3>
-                    <p>Browse our menu and choose from our delicious selection of soups, mains, desserts, and beverages</p>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <i class="fas fa-sliders-h"></i>
-                    </div>
-                    <h3>Customize Your Order</h3>
-                    <p>Add extra ingredients, choose portion sizes, and customize your meal exactly how you like it</p>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
-                    <h3>Choose Delivery</h3>
-                    <p>Select home delivery or pickup at our location. Delivery fees will be added for your convenience</p>
-                </div>
-                
-                <!-- Step 4 -->
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <div class="step-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Enjoy Your Food</h3>
-                    <p>Sit back and enjoy your freshly prepared meal made with the finest ingredients</p>
-                </div>
-            </div>
+    <section class="how-it-works-section">
+      <div class="container">
+        <div class="section-header">
+          <h1>How It Works</h1>
+          <p>
+            Simple steps to get your perfect meal delivered fresh to your door
+          </p>
+          <div class="divider"></div>
         </div>
+
+        <div class="steps-container">
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <h3>Select Your Meal</h3>
+            <p>
+              Browse our menu and choose from our delicious selection of soups,
+              mains, desserts, and beverages
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-icon">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h3>Customize Your Order</h3>
+            <p>
+              Add extra ingredients, choose portion sizes, and customize your
+              meal exactly how you like it
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-icon">
+              <i class="fas fa-truck"></i>
+            </div>
+            <h3>Choose Delivery</h3>
+            <p>
+              Select home delivery or pickup at our location. Delivery fees will
+              be added for your convenience
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>Enjoy Your Food</h3>
+            <p>
+              Sit back and enjoy your freshly prepared meal made with the finest
+              ingredients
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials Section -->
-       <section class="testimonials-section">
-        <div class="container">
-            <div class="section-header">
-                <h1>What Our Customers Say</h1>
-                <p>Don't just take our word for it - hear from our satisfied customers who love our fresh, customizable meals</p>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="testimonials-container">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The melon soup with extra chicken was absolutely divine! I love how I can customize the amount of meat in my soup. The delivery was quick and the food arrived hot. Goumeth Gather has become my go-to for comfort food."</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">SM</div>
-                        <div class="customer-details">
-                            <h4>Sarah Martinez</h4>
-                            <p>Regular Customer</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Perfect for busy families! The ability to customize each family member's meal is a game-changer. Kids love the desserts, I enjoy the main courses, and the delivery service is always reliable. Highly recommend!"</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">DR</div>
-                        <div class="customer-details">
-                            <h4>David Rodriguez</h4>
-                            <p>Family Customer</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Outstanding intercontinental dishes! The variety is incredible and each dish is bursting with authentic flavors. The staff clearly knows their craft. I've tried cuisine from at least 5 different countries here and everything exceeded expectations."</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">MC</div>
-                        <div class="customer-details">
-                            <h4>Michael Chen</h4>
-                            <p>Food Enthusiast</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 4 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"As someone with dietary restrictions, I appreciate how accommodating Goumeth Gather is. The customization options let me avoid ingredients I can't have while still enjoying delicious, restaurant-quality meals at home."</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">LP</div>
-                        <div class="customer-details">
-                            <h4>Lisa Park</h4>
-                            <p>Health-Conscious Customer</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 5 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Their fresh baked goods are phenomenal! The artisan bread pairs perfectly with their soups. I order weekly and the quality never disappoints. The customization options make every meal feel special and tailored just for me."</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">ET</div>
-                        <div class="customer-details">
-                            <h4>Emma Thompson</h4>
-                            <p>Weekly Customer</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 6 -->
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The craft beverages are exceptional! They pair perfectly with every meal. The attention to detail in both food and drinks shows they truly care about the complete dining experience. Five stars without hesitation!"</p>
-                    <div class="customer-info">
-                        <div class="customer-avatar">AJ</div>
-                        <div class="customer-details">
-                            <h4>Alex Johnson</h4>
-                            <p>Local Food Blogger</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section class="testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <h1>What Our Customers Say</h1>
+          <p>
+            Don't just take our word for it - hear from our satisfied customers
+            who love our fresh, customizable meals
+          </p>
+          <div class="divider"></div>
         </div>
-    </section>
 
-<!-- Location Section -->
-
-   <section class="location-section">
-        <div class="container">
-            <div class="section-header">
-                <h1>Visit Our Location</h1>
-                <div class="divider"></div>
+        <div class="testimonials-container">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
             </div>
-            
-            <div class="content-container">
-                <!-- Visit Our Location Card -->
-                <div class="info-card">
-                    <h2>Visit Our Location</h2>
-                    <div class="contact-info">
-                        <div class="info-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div class="info-content">
-                                <strong>Address</strong>
-                                <p>123 Oron Road<br>Off Ring Road 3, Uyo, AKS</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <div class="info-content">
-                                <strong>Phone</strong>
-                                <p>(234) 703-4567-543</p>
-                            </div>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info-content">
-                                <strong>Email</strong>
-                                <p>hello@gourmethgather.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Hours of Operation Card -->
-                <div class="info-card">
-                    <h2>Hours of Operation</h2>
-                    <div class="hours-list">
-                        <div class="hours-item">
-                            <strong>Monday - Thursday</strong>
-                            <span>11:00 AM - 9:00 PM</span>
-                        </div>
-                        <div class="hours-item">
-                            <strong>Friday - Saturday</strong>
-                            <span>11:00 AM - 10:00 PM</span>
-                        </div>
-                        <div class="hours-item">
-                            <strong>Sunday</strong>
-                            <span>12:00 PM - 8:00 PM</span>
-                        </div>
-                    </div>
-                    <button class="reservation-btn">Make Reservation</button>
-                </div>
-                
-                <!-- Find Us Card -->
-                <div class="info-card">
-                    <h2>Find Us</h2>
-                    <div class="map-container">
-                        <!-- Replace with your actual Google Maps embed code -->
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.17763129463!2d-74.00594908459418!3d40.71278367933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a2e69b114fd%3A0x7c3d1c5e7a3d4b0e!2s123%20Culinary%20St%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-       <!-- CTA Section with Yellow Background -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-new">
-                  <h1>Ready to Order?</h1>
-                <p>Experience the finest ingredients crafted into extraordinary meals, delivered fresh to your door</p>
+            <p class="testimonial-text">
+              "The melon soup with extra chicken was absolutely divine! I love
+              how I can customize the amount of meat in my soup. The delivery
+              was quick and the food arrived hot. Goumeth Gather has become my
+              go-to for comfort food."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">SM</div>
+              <div class="customer-details">
+                <h4>Sarah Martinez</h4>
+                <p>Regular Customer</p>
               </div>
-
-                <div class="divider"></div>
-            <div class="cta-content">
-              
-              
-                
             </div>
-            <a href="#" class="cta-button">Start Ordering</a>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Perfect for busy families! The ability to customize each family
+              member's meal is a game-changer. Kids love the desserts, I enjoy
+              the main courses, and the delivery service is always reliable.
+              Highly recommend!"
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">DR</div>
+              <div class="customer-details">
+                <h4>David Rodriguez</h4>
+                <p>Family Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Outstanding intercontinental dishes! The variety is incredible
+              and each dish is bursting with authentic flavors. The staff
+              clearly knows their craft. I've tried cuisine from at least 5
+              different countries here and everything exceeded expectations."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">MC</div>
+              <div class="customer-details">
+                <h4>Michael Chen</h4>
+                <p>Food Enthusiast</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "As someone with dietary restrictions, I appreciate how
+              accommodating Goumeth Gather is. The customization options let me
+              avoid ingredients I can't have while still enjoying delicious,
+              restaurant-quality meals at home."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">LP</div>
+              <div class="customer-details">
+                <h4>Lisa Park</h4>
+                <p>Health-Conscious Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Their fresh baked goods are phenomenal! The artisan bread pairs
+              perfectly with their soups. I order weekly and the quality never
+              disappoints. The customization options make every meal feel
+              special and tailored just for me."
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">ET</div>
+              <div class="customer-details">
+                <h4>Emma Thompson</h4>
+                <p>Weekly Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The craft beverages are exceptional! They pair perfectly with
+              every meal. The attention to detail in both food and drinks shows
+              they truly care about the complete dining experience. Five stars
+              without hesitation!"
+            </p>
+            <div class="customer-info">
+              <div class="customer-avatar">AJ</div>
+              <div class="customer-details">
+                <h4>Alex Johnson</h4>
+                <p>Local Food Blogger</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+
+    <section class="location-section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Visit Our Location</h1>
+          <div class="divider"></div>
+        </div>
+
+        <div class="content-container">
+          <!-- Visit Our Location Card -->
+          <div class="info-card">
+            <h2>Visit Our Location</h2>
+            <div class="contact-info">
+              <div class="info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div class="info-content">
+                  <strong>Address</strong>
+                  <p>123 Oron Road<br />Off Ring Road 3, Uyo, AKS</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <div class="info-content">
+                  <strong>Phone</strong>
+                  <p>(234) 703-4567-543</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div class="info-content">
+                  <strong>Email</strong>
+                  <p>hello@gourmethgather.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hours of Operation Card -->
+          <div class="info-card">
+            <h2>Hours of Operation</h2>
+            <div class="hours-list">
+              <div class="hours-item">
+                <strong>Monday - Thursday</strong>
+                <span>11:00 AM - 9:00 PM</span>
+              </div>
+              <div class="hours-item">
+                <strong>Friday - Saturday</strong>
+                <span>11:00 AM - 10:00 PM</span>
+              </div>
+              <div class="hours-item">
+                <strong>Sunday</strong>
+                <span>12:00 PM - 8:00 PM</span>
+              </div>
+            </div>
+            <button class="reservation-btn">Make Reservation</button>
+          </div>
+
+          <!-- Find Us Card -->
+          <div class="info-card">
+            <h2>Find Us</h2>
+            <div class="map-container">
+              <!-- Replace with your actual Google Maps embed code -->
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.17763129463!2d-74.00594908459418!3d40.71278367933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a2e69b114fd%3A0x7c3d1c5e7a3d4b0e!2s123%20Culinary%20St%2C%20New%20York%2C%20NY%2010001!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section with Yellow Background -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-new">
+          <h1>Ready to Order?</h1>
+          <p>
+            Experience the finest ingredients crafted into extraordinary meals,
+            delivered fresh to your door
+          </p>
+        </div>
+
+        <div class="divider"></div>
+        <div class="cta-content"></div>
+        <a href="#" class="cta-button">Start Ordering</a>
+      </div>
     </section>
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="footer-content">
-            <!-- Brand Column -->
-            <div class="footer-brand">
-                <h3>Gourmeth Gather</h3>
-                <p>Fresh ingredients, extraordinary flavors.<br>Crafting memorable dining experiences with passion and precision.</p>
-            </div>
-
-            <!-- Quick Links Column -->
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Menu</a></li>
-                    <li><a href="#">Reservations</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Customer Service Column -->
-            <div class="footer-service">
-                <h4>Customer Service</h4>
-                <ul>
-                    <li><a href="#">Order Status</a></li>
-                    <li><a href="#">Delivery Info</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-
-            <!-- Newsletter Column -->
-            <div class="footer-newsletter">
-                <h4>Newsletter</h4>
-                <p style="color: #bdc3c7; margin-bottom: 1rem;">Stay updated with our latest dishes and offers</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email" class="newsletter-input" required>
-                    <button type="submit" class="subscribe-btn">Subscribe</button>
-                </form>
-            </div>
+      <div class="footer-content">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <h3>Gourmeth Gather</h3>
+          <p>
+            Fresh ingredients, extraordinary flavors.<br />Crafting memorable
+            dining experiences with passion and precision.
+          </p>
         </div>
 
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <p>&copy; 2024 Gourmeth Gather. All rights reserved.</p>
+        <!-- Quick Links Column -->
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Reservations</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
         </div>
+
+        <!-- Customer Service Column -->
+        <div class="footer-service">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Delivery Info</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Column -->
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p style="color: #bdc3c7; margin-bottom: 1rem">
+            Stay updated with our latest dishes and offers
+          </p>
+          <form class="newsletter-form">
+            <input
+              type="email"
+              placeholder="Your email"
+              class="newsletter-input"
+              required
+            />
+            <button type="submit" class="subscribe-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Gourmeth Gather. All rights reserved.</p>
+      </div>
     </footer>
 
     <!-- Bootstrap JS and Popper.js -->
